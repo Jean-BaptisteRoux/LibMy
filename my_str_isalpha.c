@@ -5,17 +5,12 @@
 ** test
 ** test
 */
-#include <stdio.h>
+#include "my.h"
 
-int my_str_isalpha(char const *str)
+int str_isalpha(char const *str)
 {
-    int i = 0;
-
-    while (str[i] != '\0') {
-        if ((str[i] < 'a' && str[i] > 'z') || (str[i] < 'A' && str[i] > 'Z')) {
-            return 0;
-        }
-        i++;
-    }
-    return 1;
+    for (int i = 0; str[i] != '\0'; i++)
+        if ((str[i] < 'a' && str[i] > 'z') || (str[i] < 'A' && str[i] > 'Z'))
+            return i;
+    return -1;
 }

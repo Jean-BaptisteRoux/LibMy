@@ -5,15 +5,14 @@
 ** test
 ** test
 */
-#include <stdio.h>
+#include "my.h"
 
 char *my_strncpy(char *dest, char const *src, int n)
 {
     int i = 0;
 
-    if (n > my_strlen(src)){
-        n = my_strlen(src);
-    }
+    if (n > strl(src))
+        n = strl(src);
     while (src[i] != src[n] ){
         dest[i] = src[i];
         i++;
