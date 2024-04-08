@@ -11,8 +11,8 @@
 #include <stdarg.h>
 #include <stdint.h>
 
-// #ifndef MY_H
-//     #define MY_H
+#ifndef MY_PRINTF
+    #define MY_PRINTF
 
 struct attributs {
     int dieze;
@@ -23,7 +23,7 @@ struct attributs {
     int affi;
 };
 
-// #endif
+#endif
 #pragma once
 
 #define liste_fonction int (*func_format[])(va_list, char, int *, struct attributs **) = {assert_c, assert_s, assert_di, assert_pourcent, assert_o, assert_e,assert_x, assert_xx, assert_u, assert_p, assert_cc, asrt_n, asrt_f};

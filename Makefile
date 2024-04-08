@@ -7,7 +7,7 @@
 ##
 
 CC = gcc
-CFLAGS = -Wall -Wextra -g3
+CFLAGS = -Wall -Wextra -g3 -w
 EXEC = test
 SRC_FILES = $(shell find . -type f -name "*.c" ! -path "./.*/*")
 # SRC_FILES = $(wildcard *.c)
@@ -45,3 +45,7 @@ run:$(EXEC)
 	@(echo "\033[34mFin de l'exécution\033[0m")
 
 re : fclean all
+
+code: fclean
+	@(~/coding-style-checker/coding-style.sh . .)
+	@(cat coding-style-reports.log)

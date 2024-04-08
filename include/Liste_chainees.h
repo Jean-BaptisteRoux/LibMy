@@ -8,8 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// #ifndef MY_H_
-//     #define MY_H_
+#ifndef MY_LISTE_CHAINEES
+    #define MY_LISTE_CHAINEES
 typedef struct linked_list{
     char *data;
     int id;
@@ -58,4 +58,4 @@ int delete_nodes_char(
     linked_list_t **head,
     char *x);
 
-// #endif /* MY_H_ */
+#endif

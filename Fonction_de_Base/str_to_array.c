@@ -108,19 +108,19 @@ char **str_to_array(
     return suite_condition_str_to_array(str, list);
 }
 
-// char ***traitement_fichier(
-//     int compar,
-//     FILE *fd)
-// {
-//     char ***fichier;
-//     char *str;
-//     size_t len = 0;
+char ***traitement_fichier(
+    int compar,
+    FILE *fd)
+{
+    char ***fichier;
+    char *str;
+    size_t len = 0;
 
-//     fichier = malloc(sizeof(char **) * compar);
-//     for (int i = 0; i <= compar + 1; i++){
-//         getline(&str, &len, fd);
-//         fichier[i] = str_to_array(str, " ");
-//     }
-//     fichier[compar + 1] = NULL;
-//     return fichier;
-// }
+    fichier = malloc(sizeof(char **) * compar);
+    for (int i = 0; i <= compar + 1; i++){
+        getline(&str, &len, fd);
+        fichier[i] = str_to_array(str, " ");
+    }
+    fichier[compar + 1] = NULL;
+    return fichier;
+}
